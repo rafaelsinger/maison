@@ -19,9 +19,6 @@ export default function Home() {
 
   useScrollAnimation();
 
-  // First, let's add a constant for the navbar height to help with calculations
-  const NAV_HEIGHT = "88px"; // 56px (py-6 * 2) + 32px (px-8 * 2)
-
   return (
     <div className="relative h-screen overflow-y-auto snap-y snap-mandatory scroll-smooth">
       {/* Navigation - Dynamic background */}
@@ -48,7 +45,7 @@ export default function Home() {
       <section className="h-screen snap-start snap-always">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/mclaren-p1.jpg"
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/mclaren-p1.jpg`}
             alt="McLaren P1 in Volcanic Orange"
             fill
             className="object-cover object-center"
