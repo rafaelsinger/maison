@@ -45,7 +45,7 @@ export default function Home() {
       <section className="h-screen snap-start snap-always">
         <div className="absolute inset-0 z-0">
           <Image
-            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/mclaren-p1.jpg`}
+            src="/mclaren-p1.jpg"
             alt="McLaren P1 in Volcanic Orange"
             fill
             className="object-cover object-center"
