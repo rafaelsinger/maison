@@ -9,7 +9,7 @@ export default function Home() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > window.innerHeight - 100;
+      const isScrolled = window.scrollY > window.innerHeight * 0.5;
       setScrolled(isScrolled);
     };
 
@@ -20,7 +20,7 @@ export default function Home() {
   useScrollAnimation();
 
   return (
-    <div className="relative">
+    <div className="relative h-screen overflow-y-auto snap-y snap-mandatory">
       {/* Navigation - Dynamic background */}
       <nav className={`fixed w-full z-30 flex justify-between items-center px-8 py-6 border-b transition-all duration-300 ${
         scrolled ? 'bg-[#E5E1D6] border-[#2C3B2D]/20' : 'border-[#2C3B2D]/20'
@@ -36,13 +36,13 @@ export default function Home() {
           <h1 className="text-[2.5rem] font-['Cormorant_Infant'] text-[#2C3B2D] tracking-[0.2em] uppercase">Guards</h1>
           <span className="text-[1rem] font-['Cormorant_Infant'] text-[#2C3B2D]/80 -mt-1">Autohaus</span>
         </div>
-        <button className="px-8 py-2 border border-[#2C3B2D] rounded-[2rem] text-[#2C3B2D] font-['Cormorant_Infant'] hover:bg-[#2C3B2D] hover:text-white transition-colors">
+        <button className="px-8 py-2 border border-[#2C3B2D] rounded-[0.75rem] text-[#2C3B2D] font-['Cormorant_Infant'] hover:bg-[#2C3B2D] hover:text-white transition-colors">
           CONTACT
         </button>
       </nav>
 
       {/* Hero Section */}
-      <section className="relative h-screen">
+      <section className="relative h-screen snap-start">
         <div className="absolute inset-0 z-0">
           <Image
             src="/mclaren-p1.jpg"
@@ -55,13 +55,13 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 h-full">
-          <div className="pt-32 flex flex-col items-center text-center px-4">
+          <div className="pt-40 flex flex-col items-center text-center px-4">
             <h2 className="text-[3rem] font-['Cormorant_Infant'] text-[#2C3B2D] leading-[1.1] max-w-[90%] tracking-[0.1em] uppercase">
               We Give You The Data,
               <br />
               You Win The Deal.
             </h2>
-            <button className="mt-6 px-12 py-3 border border-[#2C3B2D] rounded-[2rem] text-[#2C3B2D] font-['Cormorant_Infant'] text-lg tracking-wider uppercase hover:bg-[#2C3B2D] hover:text-white transition-colors">
+            <button className="mt-6 px-12 py-3 border border-[#2C3B2D] rounded-[0.75rem] text-[#2C3B2D] font-['Cormorant_Infant'] text-lg tracking-wider uppercase hover:bg-[#2C3B2D] hover:text-white transition-colors">
               Discover Now
             </button>
           </div>
@@ -69,7 +69,7 @@ export default function Home() {
       </section>
 
       {/* Incentives Section */}
-      <section className="min-h-screen bg-[#E5E1D6] relative overflow-hidden">
+      <section className="min-h-screen bg-[#E5E1D6] relative overflow-hidden snap-start">
         <div className="max-w-7xl mx-auto px-8 py-24 flex items-center gap-16">
           <div className="w-1/2 space-y-8" data-animate-on-scroll>
             <h2 className="text-[4rem] font-['Cormorant_Infant'] text-[#2C3B2D] leading-tight tracking-wide">
@@ -81,7 +81,7 @@ export default function Home() {
             <p className="text-2xl font-['Cormorant_Infant'] text-[#2C3B2D]/90">
               We work alongside your broker to help you buy better.
             </p>
-            <button className="mt-8 px-12 py-3 border border-[#2C3B2D] rounded-[2rem] text-[#2C3B2D] font-['Cormorant_Infant'] text-lg tracking-wider hover:bg-[#2C3B2D] hover:text-white transition-colors">
+            <button className="mt-8 px-12 py-3 border border-[#2C3B2D] rounded-[0.75rem] text-[#2C3B2D] font-['Cormorant_Infant'] text-lg tracking-wider hover:bg-[#2C3B2D] hover:text-white transition-colors">
               Compare our results
             </button>
           </div>
@@ -98,7 +98,7 @@ export default function Home() {
       </section>
 
       {/* Analysis Section */}
-      <section className="min-h-screen bg-[#E5E1D6] relative overflow-hidden">
+      <section className="min-h-screen bg-[#E5E1D6] relative overflow-hidden snap-start">
         <div className="max-w-7xl mx-auto px-8 py-24 flex items-center gap-16">
           <div className="w-1/2 relative h-[600px]" data-animate-on-scroll>
             <Image
@@ -123,7 +123,7 @@ export default function Home() {
               <br />
               numbers to win deals.
             </p>
-            <button className="mt-8 px-12 py-3 border border-[#2C3B2D] rounded-[2rem] text-[#2C3B2D] font-['Cormorant_Infant'] text-lg tracking-wider hover:bg-[#2C3B2D] hover:text-white transition-colors">
+            <button className="mt-8 px-12 py-3 border border-[#2C3B2D] rounded-[0.75rem] text-[#2C3B2D] font-['Cormorant_Infant'] text-lg tracking-wider hover:bg-[#2C3B2D] hover:text-white transition-colors">
               Get a personal report
             </button>
           </div>
@@ -131,7 +131,7 @@ export default function Home() {
       </section>
 
       {/* Dream Cars Section */}
-      <section className="min-h-screen bg-[#E5E1D6] relative overflow-hidden">
+      <section className="min-h-screen bg-[#E5E1D6] relative overflow-hidden snap-start">
         <div className="max-w-7xl mx-auto px-8 py-24 flex flex-col items-center">
           {/* Header */}
           <div className="text-center mb-16 space-y-6" data-animate-on-scroll>
@@ -204,7 +204,7 @@ export default function Home() {
           </div>
 
           {/* CTA Button */}
-          <button className="px-16 py-4 border border-[#2C3B2D] rounded-[2rem] text-[#2C3B2D] font-['Cormorant_Infant'] text-xl tracking-wider hover:bg-[#2C3B2D] hover:text-white transition-colors" data-animate-on-scroll>
+          <button className="px-16 py-4 border border-[#2C3B2D] rounded-[0.75rem] text-[#2C3B2D] font-['Cormorant_Infant'] text-xl tracking-wider hover:bg-[#2C3B2D] hover:text-white transition-colors" data-animate-on-scroll>
             DISCOVER NOW
           </button>
         </div>
