@@ -129,6 +129,86 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Dream Cars Section */}
+      <section className="min-h-screen bg-[#E5E1D6] relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-8 py-24 flex flex-col items-center">
+          {/* Header */}
+          <div className="text-center mb-16 space-y-6" data-animate-on-scroll>
+            <h2 className="text-[4rem] font-['Cormorant_Infant'] text-[#2C3B2D] leading-tight">
+              We turn dream cars into investments
+            </h2>
+            <p className="text-2xl font-['Cormorant_Infant'] text-[#2C3B2D]/90">
+              Personalized Reports. Off-market cars. White-glove service.
+            </p>
+          </div>
+
+          {/* Three Columns */}
+          <div className="grid grid-cols-3 gap-12 w-full mb-16">
+            {/* Data Insight Column */}
+            <div className="space-y-6" data-animate-on-scroll>
+              <div className="relative h-[400px] mb-6">
+                <Image
+                  src="/finance1.jpg"
+                  alt="Data analytics dashboard"
+                  fill
+                  className="object-cover rounded-lg"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+              </div>
+              <h3 className="text-2xl font-['Cormorant_Infant'] text-[#2C3B2D] font-medium">
+                Data-backed insight
+              </h3>
+              <p className="text-lg font-['Cormorant_Infant'] text-[#2C3B2D]/90">
+                Car buying focused on profit.
+              </p>
+            </div>
+
+            {/* Market Scan Column */}
+            <div className="space-y-6" data-animate-on-scroll>
+              <div className="relative h-[400px] mb-6">
+                <Image
+                  src="/store1.jpg"
+                  alt="Luxury car showroom"
+                  fill
+                  className="object-cover rounded-lg"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+              </div>
+              <h3 className="text-2xl font-['Cormorant_Infant'] text-[#2C3B2D] font-medium">
+                Scan the entire market
+              </h3>
+              <p className="text-lg font-['Cormorant_Infant'] text-[#2C3B2D]/90">
+                Your brokerage + our network.
+              </p>
+            </div>
+
+            {/* Process Column */}
+            <div className="space-y-6" data-animate-on-scroll>
+              <div className="relative h-[400px] mb-6">
+                <Image
+                  src="/transport1.jpg"
+                  alt="Car delivery process"
+                  fill
+                  className="object-cover rounded-lg"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+              </div>
+              <h3 className="text-2xl font-['Cormorant_Infant'] text-[#2C3B2D] font-medium">
+                Effortless process
+              </h3>
+              <p className="text-lg font-['Cormorant_Infant'] text-[#2C3B2D]/90">
+                From research to delivery, you win.
+              </p>
+            </div>
+          </div>
+
+          {/* CTA Button */}
+          <button className="px-16 py-4 border border-[#2C3B2D] rounded-[2rem] text-[#2C3B2D] font-['Cormorant_Infant'] text-xl tracking-wider hover:bg-[#2C3B2D] hover:text-white transition-colors" data-animate-on-scroll>
+            DISCOVER NOW
+          </button>
+        </div>
+      </section>
+
     </div>
   );
 }
