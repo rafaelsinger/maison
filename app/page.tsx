@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useScrollAnimation } from './components/ScrollAnimation';
+import Link from 'next/link';
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
@@ -209,6 +210,56 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Footer */}
+      <footer className="bg-[#E5E1D6] border-t border-[#2C3B2D]/20 py-8">
+        <div className="max-w-7xl mx-auto px-8">
+          {/* Logo and Links Container */}
+          <div className="flex justify-between items-center mb-8">
+            {/* Left Links */}
+            <div className="flex gap-8">
+              <Link href="/" className="text-[#2C3B2D] font-['Cormorant_Infant'] text-lg hover:opacity-70">
+                Home
+              </Link>
+              <Link href="/contact" className="text-[#2C3B2D] font-['Cormorant_Infant'] text-lg hover:opacity-70">
+                Contact
+              </Link>
+              <Link href="/about" className="text-[#2C3B2D] font-['Cormorant_Infant'] text-lg hover:opacity-70">
+                About
+              </Link>
+            </div>
+
+            {/* Center Logo */}
+            <div className="flex flex-col items-center">
+              <h2 className="text-2xl font-['Cormorant_Infant'] text-[#2C3B2D] tracking-[0.2em] uppercase">
+                Guards
+              </h2>
+              <span className="text-sm font-['Cormorant_Infant'] text-[#2C3B2D]/80">
+                Autohaus
+              </span>
+            </div>
+
+            {/* Right Links */}
+            <div className="flex gap-8">
+              <Link href="/results" className="text-[#2C3B2D] font-['Cormorant_Infant'] text-lg hover:opacity-70">
+                Results
+              </Link>
+              <Link href="/careers" className="text-[#2C3B2D] font-['Cormorant_Infant'] text-lg hover:opacity-70">
+                Careers
+              </Link>
+              <Link href="/legal" className="text-[#2C3B2D] font-['Cormorant_Infant'] text-lg hover:opacity-70">
+                Legal
+              </Link>
+            </div>
+          </div>
+
+          {/* Copyright */}
+          <div className="text-center">
+            <p className="text-[#2C3B2D]/80 font-['Cormorant_Infant'] text-sm">
+              © GUARDS Autohaus {new Date().getFullYear()} | All Rights Reserved
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
