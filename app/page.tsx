@@ -95,6 +95,40 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Analysis Section */}
+      <section className="min-h-screen bg-[#E5E1D6] relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-8 py-24 flex items-center gap-16">
+          <div className="w-1/2 relative h-[600px]" data-animate-on-scroll>
+            <Image
+              src="/porsche1.jpg"
+              alt="Porsche steering wheel detail"
+              fill
+              className="object-cover rounded-lg"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
+          <div className="w-1/2 space-y-8" data-animate-on-scroll>
+            <h2 className="text-[4rem] font-['Cormorant_Infant'] text-[#2C3B2D] leading-tight tracking-wide">
+              ANALYSIS
+            </h2>
+            <p className="text-2xl font-['Cormorant_Infant'] text-[#2C3B2D]/90">
+              Every car is fun to buy,
+              <br />
+              but few are profitable.
+            </p>
+            <p className="text-2xl font-['Cormorant_Infant'] text-[#2C3B2D]/90">
+              Our data systems give you the
+              <br />
+              numbers to win deals.
+            </p>
+            <button className="mt-8 px-12 py-3 border border-[#2C3B2D] rounded-[2rem] text-[#2C3B2D] font-['Cormorant_Infant'] text-lg tracking-wider hover:bg-[#2C3B2D] hover:text-white transition-colors">
+              Get a personal report
+            </button>
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 }
